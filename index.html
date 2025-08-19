@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YANACADEMY - Learn Spanish Online</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>YANACADEMY</h1>
+                    <span class="tagline">¡Aprende Español!</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <div class="nav-cart">
+                        <button class="cart-btn" id="cart-btn" aria-label="Shopping Cart">
+                            <span class="cart-icon">🛒</span>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Master Spanish with <span class="accent-text">YANACADEMY</span></h1>
+                <p class="hero-subtitle">Join thousands of students learning Spanish through our innovative online platform. From beginner to advanced, we have the perfect course for you.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('courses-preview')">Explore Courses</button>
+                    <button class="btn btn-secondary" onclick="openModal('subscribe-modal')">Subscribe Newsletter</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Students learning Spanish together" loading="eager">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose YANACADEMY?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Personalized Learning</h3>
+                        <p>Tailored courses that adapt to your learning style and pace for maximum effectiveness.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Expert Instructors</h3>
+                        <p>Learn from native Spanish speakers with years of teaching experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Access your lessons anywhere, anytime on any device with our responsive platform.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Proven Results</h3>
+                        <p>Over 95% of our students achieve their Spanish learning goals within 6 months.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Preview Section -->
+        <section class="courses-preview" id="courses-preview">
+            <div class="container">
+                <h2 class="section-title">Popular Courses</h2>
+                <div class="courses-grid">
+                    <div class="course-card" data-course-id="beginner">
+                        <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Beginner Spanish course" loading="lazy">
+                        <div class="course-content">
+                            <h3>Beginner Spanish</h3>
+                            <p>Perfect for complete beginners. Learn basic vocabulary, grammar, and conversation skills.</p>
+                            <div class="course-details">
+                                <span class="course-price">$99</span>
+                                <span class="course-duration">8 weeks</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart" data-course='{"id":"beginner","name":"Beginner Spanish","price":99,"image":"https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="intermediate">
+                        <img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Intermediate Spanish course" loading="lazy">
+                        <div class="course-content">
+                            <h3>Intermediate Spanish</h3>
+                            <p>Build on your foundation with complex grammar and cultural immersion.</p>
+                            <div class="course-details">
+                                <span class="course-price">$129</span>
+                                <span class="course-duration">10 weeks</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart" data-course='{"id":"intermediate","name":"Intermediate Spanish","price":129,"image":"https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="advanced">
+                        <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Advanced Spanish course" loading="lazy">
+                        <div class="course-content">
+                            <h3>Advanced Spanish</h3>
+                            <p>Master fluency with advanced conversation and professional Spanish skills.</p>
+                            <div class="course-details">
+                                <span class="course-price">$159</span>
+                                <span class="course-duration">12 weeks</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart" data-course='{"id":"advanced","name":"Advanced Spanish","price":159,"image":"https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="courses.html" class="btn btn-secondary">View All Courses</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Students Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"YANACADEMY transformed my Spanish learning journey. The instructors are amazing and the courses are well-structured!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Maria Rodriguez" loading="lazy">
+                            <div>
+                                <h4>Maria Rodriguez</h4>
+                                <span>Advanced Student</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"I went from zero to conversational Spanish in just 6 months. The personalized approach really works!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150" alt="John Smith" loading="lazy">
+                            <div>
+                                <h4>John Smith</h4>
+                                <span>Intermediate Graduate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated with Spanish Learning Tips</h2>
+                    <p>Get weekly lessons, cultural insights, and exclusive course discounts delivered to your inbox.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>YANACADEMY</h3>
+                    <p>Empowering students worldwide to master the Spanish language through innovative online education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 info@yanacademy.com</p>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>📍 123 Learning Street, Education City, EC 12345</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YANACADEMY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="subscribe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('subscribe-modal')">&times;</span>
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="modal-newsletter-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <select required>
+                    <option value="">Select your Spanish level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cart-modal')">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+                <button class="btn btn-primary" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/home.js"></script>

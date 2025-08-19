@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - YANACADEMY</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>YANACADEMY</h1>
+                    <span class="tagline">¡Aprende Español!</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="gallery.html" class="nav-link active" aria-current="page">Gallery</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <div class="nav-cart">
+                        <button class="cart-btn" id="cart-btn" aria-label="Shopping Cart">
+                            <span class="cart-icon">🛒</span>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Gallery</h1>
+                <p>Explore our vibrant Spanish learning community and success stories</p>
+            </div>
+        </section>
+
+        <!-- Gallery Filter -->
+        <section class="gallery-filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="classroom">Classroom</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                    <button class="filter-btn" data-filter="students">Students</button>
+                    <button class="filter-btn" data-filter="materials">Materials</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-content">
+            <div class="container">
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Classroom Images -->
+                    <div class="gallery-item" data-category="classroom">
+                        <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Online Spanish classroom session" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Online Classroom</h3>
+                            <p>Interactive Spanish lessons with native speakers</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="classroom">
+                        <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spanish conversation practice" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Conversation Practice</h3>
+                            <p>Small group discussions and role-playing exercises</p>
+                        </div>
+                    </div>
+
+                    <!-- Events Images -->
+                    <div class="gallery-item" data-category="events">
+                        <img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spanish cultural event" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Cultural Immersion</h3>
+                            <p>Monthly Spanish culture and food events</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="events">
+                        <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spanish graduation ceremony" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Graduation Day</h3>
+                            <p>Celebrating our successful Spanish graduates</p>
+                        </div>
+                    </div>
+
+                    <!-- Students Images -->
+                    <div class="gallery-item" data-category="students">
+                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Happy Spanish student" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Success Story</h3>
+                            <p>Maria achieved fluency in just 8 months</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="students">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spanish student testimonial" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Student Testimonial</h3>
+                            <p>John's journey from beginner to advanced</p>
+                        </div>
+                    </div>
+
+                    <!-- Materials Images -->
+                    <div class="gallery-item" data-category="materials">
+                        <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spanish learning materials" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Learning Materials</h3>
+                            <p>Comprehensive textbooks and digital resources</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="materials">
+                        <img src="https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spanish learning app interface" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Mobile App</h3>
+                            <p>Learn Spanish on-the-go with our mobile platform</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="classroom">
+                        <img src="https://images.pexels.com/photos/1181540/pexels-photo-1181540.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spanish grammar lesson" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Grammar Mastery</h3>
+                            <p>Interactive grammar lessons with visual aids</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="events">
+                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spanish language workshop" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Language Workshop</h3>
+                            <p>Intensive weekend Spanish immersion workshops</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="students">
+                        <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spanish study group" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Study Groups</h3>
+                            <p>Collaborative learning with fellow students</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="materials">
+                        <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Spanish vocabulary flashcards" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Vocabulary Tools</h3>
+                            <p>Interactive flashcards and memory games</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Achievements -->
+        <section class="achievements">
+            <div class="container">
+                <h2 class="section-title">Student Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-number">500+</div>
+                        <h3>Graduates</h3>
+                        <p>Students who completed their Spanish courses</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">95%</div>
+                        <h3>Success Rate</h3>
+                        <p>Students who achieved their learning goals</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">30+</div>
+                        <h3>Countries</h3>
+                        <p>Students from around the world</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">4.8/5</div>
+                        <h3>Rating</h3>
+                        <p>Average student satisfaction score</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Feedback Section -->
+        <section class="feedback-section">
+            <div class="container">
+                <h2 class="section-title">Share Your Experience</h2>
+                <form class="feedback-form" id="feedback-form">
+                    <div class="form-group">
+                        <label for="feedback-name">Name:</label>
+                        <input type="text" id="feedback-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback-email">Email:</label>
+                        <input type="email" id="feedback-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback-rating">Rating:</label>
+                        <select id="feedback-rating" required>
+                            <option value="">Select Rating</option>
+                            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                            <option value="4">⭐⭐⭐⭐ Good</option>
+                            <option value="3">⭐⭐⭐ Average</option>
+                            <option value="2">⭐⭐ Fair</option>
+                            <option value="1">⭐ Poor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback-message">Your Feedback:</label>
+                        <textarea id="feedback-message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>YANACADEMY</h3>
+                    <p>Empowering students worldwide to master the Spanish language through innovative online education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 info@yanacademy.com</p>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>📍 123 Learning Street, Education City, EC 12345</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YANACADEMY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cart-modal')">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+                <button class="btn btn-primary" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/gallery.js"></script>

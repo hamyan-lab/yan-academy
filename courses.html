@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - YANACADEMY</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>YANACADEMY</h1>
+                    <span class="tagline">¡Aprende Español!</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="courses.html" class="nav-link active" aria-current="page">Courses</a>
+                    <div class="nav-cart">
+                        <button class="cart-btn" id="cart-btn" aria-label="Shopping Cart">
+                            <span class="cart-icon">🛒</span>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Spanish Courses</h1>
+                <p>Choose from our comprehensive range of Spanish courses designed for every learning level and goal</p>
+            </div>
+        </section>
+
+        <!-- Course Filters -->
+        <section class="course-filters">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="level-filter">Level:</label>
+                        <select id="level-filter">
+                            <option value="">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="duration-filter">Duration:</label>
+                        <select id="duration-filter">
+                            <option value="">Any Duration</option>
+                            <option value="short">1-8 weeks</option>
+                            <option value="medium">9-16 weeks</option>
+                            <option value="long">17+ weeks</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-filter">Price Range:</label>
+                        <select id="price-filter">
+                            <option value="">Any Price</option>
+                            <option value="budget">Under $100</option>
+                            <option value="moderate">$100-$200</option>
+                            <option value="premium">$200+</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary" onclick="clearFilters()">Clear Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Grid -->
+        <section class="courses-content">
+            <div class="container">
+                <div class="courses-grid" id="courses-grid">
+                    <!-- Beginner Courses -->
+                    <div class="course-card" data-level="beginner" data-duration="short" data-price="budget">
+                        <div class="course-image">
+                            <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Beginner Spanish course" loading="lazy">
+                            <div class="course-level">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Spanish Fundamentals</h3>
+                            <p>Perfect introduction to Spanish language. Learn basic vocabulary, essential phrases, and fundamental grammar rules.</p>
+                            <div class="course-features">
+                                <span class="feature">📚 Interactive Lessons</span>
+                                <span class="feature">🎯 Beginner Friendly</span>
+                                <span class="feature">📱 Mobile Access</span>
+                            </div>
+                            <div class="course-details">
+                                <div class="course-info">
+                                    <span class="course-price">$99</span>
+                                    <span class="course-duration">8 weeks</span>
+                                    <span class="course-students">250+ students</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart" data-course='{"id":"beginner","name":"Spanish Fundamentals","price":99,"image":"https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-level="beginner" data-duration="medium" data-price="moderate">
+                        <div class="course-image">
+                            <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Spanish conversation course" loading="lazy">
+                            <div class="course-level">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Conversational Spanish for Beginners</h3>
+                            <p>Focus on practical conversation skills for everyday situations. Build confidence in speaking Spanish.</p>
+                            <div class="course-features">
+                                <span class="feature">🗣️ Speaking Practice</span>
+                                <span class="feature">👥 Group Sessions</span>
+                                <span class="feature">🎥 Video Lessons</span>
+                            </div>
+                            <div class="course-details">
+                                <div class="course-info">
+                                    <span class="course-price">$149</span>
+                                    <span class="course-duration">12 weeks</span>
+                                    <span class="course-students">180+ students</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart" data-course='{"id":"conversation-beginner","name":"Conversational Spanish for Beginners","price":149,"image":"https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intermediate Courses -->
+                    <div class="course-card" data-level="intermediate" data-duration="medium" data-price="moderate">
+                        <div class="course-image">
+                            <img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Intermediate Spanish course" loading="lazy">
+                            <div class="course-level">Intermediate</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Intermediate Spanish Mastery</h3>
+                            <p>Advance your Spanish skills with complex grammar, cultural insights, and advanced conversation techniques.</p>
+                            <div class="course-features">
+                                <span class="feature">📖 Advanced Grammar</span>
+                                <span class="feature">🌍 Cultural Immersion</span>
+                                <span class="feature">📝 Writing Practice</span>
+                            </div>
+                            <div class="course-details">
+                                <div class="course-info">
+                                    <span class="course-price">$179</span>
+                                    <span class="course-duration">14 weeks</span>
+                                    <span class="course-students">320+ students</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart" data-course='{"id":"intermediate","name":"Intermediate Spanish Mastery","price":179,"image":"https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-level="intermediate" data-duration="short" data-price="moderate">
+                        <div class="course-image">
+                            <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Business Spanish course" loading="lazy">
+                            <div class="course-level">Intermediate</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Business Spanish</h3>
+                            <p>Learn professional Spanish for business contexts. Perfect for career advancement and international opportunities.</p>
+                            <div class="course-features">
+                                <span class="feature">💼 Business Vocabulary</span>
+                                <span class="feature">📊 Professional Context</span>
+                                <span class="feature">🤝 Networking Skills</span>
+                            </div>
+                            <div class="course-details">
+                                <div class="course-info">
+                                    <span class="course-price">$199</span>
+                                    <span class="course-duration">10 weeks</span>
+                                    <span class="course-students">95+ students</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart" data-course='{"id":"business","name":"Business Spanish","price":199,"image":"https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Courses -->
+                    <div class="course-card" data-level="advanced" data-duration="long" data-price="premium">
+                        <div class="course-image">
+                            <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Advanced Spanish course" loading="lazy">
+                            <div class="course-level">Advanced</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Advanced Spanish Fluency</h3>
+                            <p>Achieve near-native fluency with advanced grammar, literature analysis, and sophisticated conversation skills.</p>
+                            <div class="course-features">
+                                <span class="feature">📚 Literature Study</span>
+                                <span class="feature">🎭 Cultural Deep-Dive</span>
+                                <span class="feature">🎤 Presentation Skills</span>
+                            </div>
+                            <div class="course-details">
+                                <div class="course-info">
+                                    <span class="course-price">$249</span>
+                                    <span class="course-duration">18 weeks</span>
+                                    <span class="course-students">75+ students</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart" data-course='{"id":"advanced","name":"Advanced Spanish Fluency","price":249,"image":"https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-level="advanced" data-duration="medium" data-price="premium">
+                        <div class="course-image">
+                            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Spanish exam preparation" loading="lazy">
+                            <div class="course-level">Advanced</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>DELE/SIELE Exam Preparation</h3>
+                            <p>Intensive preparation for official Spanish proficiency exams. Comprehensive test strategies and practice.</p>
+                            <div class="course-features">
+                                <span class="feature">📋 Exam Strategies</span>
+                                <span class="feature">✅ Practice Tests</span>
+                                <span class="feature">🎯 Score Optimization</span>
+                            </div>
+                            <div class="course-details">
+                                <div class="course-info">
+                                    <span class="course-price">$229</span>
+                                    <span class="course-duration">12 weeks</span>
+                                    <span class="course-students">45+ students</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart" data-course='{"id":"exam-prep","name":"DELE/SIELE Exam Preparation","price":229,"image":"https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specialized Courses -->
+                    <div class="course-card" data-level="intermediate" data-duration="short" data-price="moderate">
+                        <div class="course-image">
+                            <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Spanish for travelers" loading="lazy">
+                            <div class="course-level">Intermediate</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Spanish for Travelers</h3>
+                            <p>Essential Spanish for travel and tourism. Navigate Spanish-speaking countries with confidence.</p>
+                            <div class="course-features">
+                                <span class="feature">✈️ Travel Vocabulary</span>
+                                <span class="feature">🗺️ Cultural Tips</span>
+                                <span class="feature">📍 Regional Dialects</span>
+                            </div>
+                            <div class="course-details">
+                                <div class="course-info">
+                                    <span class="course-price">$119</span>
+                                    <span class="course-duration">6 weeks</span>
+                                    <span class="course-students">150+ students</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart" data-course='{"id":"travel","name":"Spanish for Travelers","price":119,"image":"https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-level="beginner" data-duration="short" data-price="budget">
+                        <div class="course-image">
+                            <img src="https://images.pexels.com/photos/1181540/pexels-photo-1181540.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Spanish for kids" loading="lazy">
+                            <div class="course-level">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Spanish for Kids (Ages 8-14)</h3>
+                            <p>Fun and engaging Spanish lessons designed specifically for young learners with games and activities.</p>
+                            <div class="course-features">
+                                <span class="feature">🎮 Interactive Games</span>
+                                <span class="feature">🎨 Creative Activities</span>
+                                <span class="feature">👨‍👩‍👧‍👦 Family Friendly</span>
+                            </div>
+                            <div class="course-details">
+                                <div class="course-info">
+                                    <span class="course-price">$89</span>
+                                    <span class="course-duration">8 weeks</span>
+                                    <span class="course-students">200+ students</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart" data-course='{"id":"kids","name":"Spanish for Kids (Ages 8-14)","price":89,"image":"https://images.pexels.com/photos/1181540/pexels-photo-1181540.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="no-results" id="no-results" style="display: none;">
+                    <h3>No courses found</h3>
+                    <p>Try adjusting your filters to see more courses.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Bundles -->
+        <section class="course-bundles">
+            <div class="container">
+                <h2 class="section-title">Course Bundles - Save More!</h2>
+                <div class="bundles-grid">
+                    <div class="bundle-card">
+                        <h3>Complete Spanish Journey</h3>
+                        <p>From beginner to advanced - the complete Spanish learning experience.</p>
+                        <div class="bundle-courses">
+                            <span>Spanish Fundamentals</span>
+                            <span>Intermediate Spanish Mastery</span>
+                            <span>Advanced Spanish Fluency</span>
+                        </div>
+                        <div class="bundle-pricing">
+                            <span class="bundle-original">$527</span>
+                            <span class="bundle-price">$399</span>
+                            <span class="bundle-savings">Save $128!</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-course='{"id":"complete-bundle","name":"Complete Spanish Journey Bundle","price":399,"image":"https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add Bundle to Cart</button>
+                    </div>
+
+                    <div class="bundle-card">
+                        <h3>Professional Spanish Package</h3>
+                        <p>Perfect for career advancement and business opportunities.</p>
+                        <div class="bundle-courses">
+                            <span>Business Spanish</span>
+                            <span>Intermediate Spanish Mastery</span>
+                            <span>DELE/SIELE Exam Prep</span>
+                        </div>
+                        <div class="bundle-pricing">
+                            <span class="bundle-original">$607</span>
+                            <span class="bundle-price">$459</span>
+                            <span class="bundle-savings">Save $148!</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-course='{"id":"professional-bundle","name":"Professional Spanish Package","price":459,"image":"https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=400"}'>Add Bundle to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Path -->
+        <section class="learning-path">
+            <div class="container">
+                <h2 class="section-title">Your Spanish Learning Journey</h2>
+                <div class="path-timeline">
+                    <div class="path-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Foundation</h3>
+                            <p>Start with Spanish Fundamentals</p>
+                            <span class="step-duration">8 weeks</span>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Building Skills</h3>
+                            <p>Conversational Spanish or Business Spanish</p>
+                            <span class="step-duration">10-12 weeks</span>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Advancing</h3>
+                            <p>Intermediate Spanish Mastery</p>
+                            <span class="step-duration">14 weeks</span>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Mastery</h3>
+                            <p>Advanced Fluency or Exam Preparation</p>
+                            <span class="step-duration">12-18 weeks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Offers -->
+        <section class="special-offers">
+            <div class="container">
+                <h2 class="section-title">Limited Time Offers</h2>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <div class="offer-badge">New Student</div>
+                        <h3>20% Off First Course</h3>
+                        <p>Special discount for new students. Use code: WELCOME20</p>
+                        <div class="offer-code">Code: WELCOME20</div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-badge">Referral</div>
+                        <h3>Refer a Friend</h3>
+                        <p>Get 30% off your next course when you refer a friend!</p>
+                        <div class="offer-code">Share & Save</div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-badge">Bundle Deal</div>
+                        <h3>Bundle Savings</h3>
+                        <p>Save up to $150 when you purchase course bundles</p>
+                        <div class="offer-code">Automatic Savings</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>YANACADEMY</h3>
+                    <p>Empowering students worldwide to master the Spanish language through innovative online education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 info@yanacademy.com</p>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>📍 123 Learning Street, Education City, EC 12345</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YANACADEMY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cart-modal')">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+                <button class="btn btn-primary" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/courses.js"></script>
